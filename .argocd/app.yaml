@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/username/cronjob-project.git  # Ganti dengan repo kamu
+    repoURL: https://github.com/AsrofunNiam/cronjob-project
     targetRevision: HEAD
     path: manifests
   destination:
