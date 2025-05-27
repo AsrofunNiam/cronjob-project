@@ -1,7 +1,7 @@
-apiVersion: batch/v1
+apiVersion: batch/v2
 kind: CronJob
 metadata:
-  name: hello-cronjob
+  name: hello-cronjob-second
   namespace: default
 spec:
   schedule: "*/5 * * * *" 
@@ -10,10 +10,10 @@ spec:
       template:
         spec:
           containers:
-            - name: hello
+            - name: hello-second
               image: busybox
               args:
                 - /bin/sh
                 - -c
-                - echo "Hello from CronJob at $(date)"
+                - echo "Hello scond from CronJob at $(date)"
           restartPolicy: OnFailure
